@@ -809,6 +809,16 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 
 }
 
+- (void)registerBlankClass:(Class)cellClass
+{
+    if (![cellClass isSubclassOfClass:[FSCalendarCell class]]) {
+        [NSException raise:@"The cell class must be a subclass of FSCalendarCell." format:@""];
+    }
+    
+    [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:FSCalendarBlankCellReuseIdentifier];
+    
+}
+
 - (FSCalendarCell *)dequeueReusableCellWithIdentifier:(NSString *)identifier forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position;
 {
     if (!identifier.length) {

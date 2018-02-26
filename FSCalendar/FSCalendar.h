@@ -496,6 +496,13 @@ IB_DESIGNABLE
 - (void)registerClass:(Class)cellClass forCellReuseIdentifier:(NSString *)identifier;
 
 /**
+ Register a class for use in creating blank calendar cells.
+ 
+ @param cellClass The class of a cell that you want to use in the calendar.
+ */
+- (void)registerBlankClass:(Class)cellClass;
+
+/**
  Returns a reusable calendar cell object located by its identifier.
 
  @param identifier The reuse identifier for the specified cell. This parameter must not be nil.

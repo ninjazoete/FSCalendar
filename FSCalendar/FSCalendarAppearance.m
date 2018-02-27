@@ -36,6 +36,7 @@
         _headerTitleFont = [UIFont systemFontOfSize:FSCalendarStandardHeaderTextSize];
         
         _headerTitleColor = FSCalendarStandardTitleTextColor;
+        _headerBackgroundColor = [UIColor clearColor];
         _headerDateFormat = @"MMMM yyyy";
         _headerMinimumDissolvedAlpha = 0.2;
         _weekdayTextColor = FSCalendarStandardTitleTextColor;
@@ -402,6 +403,14 @@
 {
     if (![_headerTitleColor isEqual:color]) {
         _headerTitleColor = color;
+        [self.calendar configureAppearance];
+    }
+}
+
+- (void)setHeaderBackgroundColor:(UIColor *)color
+{
+    if (![_headerBackgroundColor isEqual:color]) {
+        _headerBackgroundColor = color;
         [self.calendar configureAppearance];
     }
 }

@@ -227,6 +227,8 @@
     [self.collectionView.visibleCells enumerateObjectsUsingBlock:^(__kindof FSCalendarHeaderCell * _Nonnull cell, NSUInteger idx, BOOL * _Nonnull stop) {
         [self configureCell:cell atIndexPath:[self.collectionView indexPathForCell:cell]];
     }];
+    
+    self.collectionView.backgroundColor = [self.calendar.appearance headerBackgroundColor];
 }
 
 @end

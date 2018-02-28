@@ -494,7 +494,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
             NSDate * month = [self.gregorian dateByAddingUnit:NSCalendarUnitMonth value:indexPath.section toDate:[self.gregorian fs_firstDayOfMonth:_minimumDate] options:0];
             stickyHeader.calendar = self;
             stickyHeader.month = month;
-            stickyHeader.supplementaryInfo = [self.dataSourceProxy calendar:self monthSupplementaryInfoForDate:month];
+            stickyHeader.supplementaryInfo = [self.dataSourceProxy calendar:self monthAdditionalInfoForDate:month];
             self.visibleSectionHeaders[indexPath] = stickyHeader;
             [stickyHeader setNeedsLayout];
             return stickyHeader;

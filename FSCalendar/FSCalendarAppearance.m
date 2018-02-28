@@ -34,8 +34,10 @@
         _subtitleFont = [UIFont systemFontOfSize:FSCalendarStandardSubtitleTextSize];
         _weekdayFont = [UIFont systemFontOfSize:FSCalendarStandardWeekdayTextSize];
         _headerTitleFont = [UIFont systemFontOfSize:FSCalendarStandardHeaderTextSize];
+        _headerAdditionalInfoFont = [UIFont systemFontOfSize:FSCalendarStandardHeaderTextSize];
         
         _headerTitleColor = FSCalendarStandardTitleTextColor;
+        _headerAdditionalInfoColor = FSCalendarStandardTitleTextColor;
         _headerBackgroundColor = [UIColor clearColor];
         _headerDateFormat = @"MMMM yyyy";
         _headerMinimumDissolvedAlpha = 0.2;
@@ -112,6 +114,14 @@
 {
     if (![_headerTitleFont isEqual:headerTitleFont]) {
         _headerTitleFont = headerTitleFont;
+        [self.calendar configureAppearance];
+    }
+}
+
+- (void)setHeaderAdditionalInfoFont:(UIFont *)font
+{
+    if (![_headerAdditionalInfoFont isEqual:font]) {
+        _headerAdditionalInfoFont = font;
         [self.calendar configureAppearance];
     }
 }
@@ -403,6 +413,14 @@
 {
     if (![_headerTitleColor isEqual:color]) {
         _headerTitleColor = color;
+        [self.calendar configureAppearance];
+    }
+}
+
+- (void)setHeaderAdditionalInfoColor:(UIColor *)color
+{
+    if (![_headerAdditionalInfoColor isEqual:color]) {
+        _headerAdditionalInfoColor = color;
         [self.calendar configureAppearance];
     }
 }

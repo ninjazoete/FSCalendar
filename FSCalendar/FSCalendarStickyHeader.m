@@ -110,6 +110,11 @@
     self.titleLabel.text = text;
 }
 
+- (void)setSupplementaryInfo:(NSString *)info
+{
+    self.titleLabel.text = info;
+}
+
 @end
 
 

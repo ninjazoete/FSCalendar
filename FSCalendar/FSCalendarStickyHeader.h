@@ -18,6 +18,8 @@
 
 @property (strong, nonatomic) NSDate *month;
 
+@property (copy, nonatomic) NSString *supplementaryInfo;
+
 - (void)configureAppearance;
 
 @end

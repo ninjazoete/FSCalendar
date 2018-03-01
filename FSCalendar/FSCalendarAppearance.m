@@ -75,6 +75,7 @@
         _borderColors = [NSMutableDictionary dictionaryWithCapacity:2];
         
         _headerTitleTextAlignment = NSTextAlignmentCenter;
+        _headerAdditionalInfoTextAlignment = NSTextAlignmentCenter;
         _topBorderLineColor = FSCalendarStandardLineColor;
         _bottomBorderLineColor = FSCalendarStandardLineColor;
         
@@ -463,6 +464,16 @@
         _separators = separators;
         [_calendar.collectionView.collectionViewLayout invalidateLayout];
     }
+}
+
+- (void)setHeaderTextInsets:(UIEdgeInsets)insets {
+    _headerTextInsets = insets;
+    [self.calendar configureAppearance];
+}
+
+- (void)setHeaderTextSeparatorOffset:(CGFloat)offset {
+    _headerTextSeparatorOffset = offset;
+    [self.calendar configureAppearance];
 }
 
 @end

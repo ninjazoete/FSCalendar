@@ -228,6 +228,22 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
 @property (assign, nonatomic) NSTextAlignment headerTitleTextAlignment;
 
 /**
+ * The text alignment of the header additional info.
+ * Default is NSTextAlignmentCenter.
+ */
+@property (assign, nonatomic) NSTextAlignment headerAdditionalInfoTextAlignment;
+
+/**
+ * The text insets for title and additional info
+ */
+@property (assign, nonatomic) UIEdgeInsets headerTextInsets;
+
+/**
+ * The text separator offset between title and additional info
+ */
+@property (assign, nonatomic) CGFloat headerTextSeparatorOffset;
+
+/**
  * The line color of the top border view.
  */
 @property (strong, nonatomic) UIColor  *topBorderLineColor;

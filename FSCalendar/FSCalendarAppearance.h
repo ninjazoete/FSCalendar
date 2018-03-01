@@ -64,6 +64,11 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
 @property (strong, nonatomic) UIFont   *headerTitleFont;
 
 /**
+ * The font of the month additional text.
+ */
+@property (strong, nonatomic) UIFont   *headerAdditionalInfoFont;
+
+/**
  * The offset of the day text from default position.
  */
 @property (assign, nonatomic) CGPoint  titleOffset;
@@ -102,6 +107,11 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
  * The color of month header text.
  */
 @property (strong, nonatomic) UIColor  *headerTitleColor;
+
+/**
+ * The color of month header additional info text.
+ */
+@property (strong, nonatomic) UIColor  *headerAdditionalInfoColor;
 
 /**
  * The color of month header background.
@@ -216,6 +226,22 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
  * Default is NSTextAlignmentCenter.
  */
 @property (assign, nonatomic) NSTextAlignment headerTitleTextAlignment;
+
+/**
+ * The text alignment of the header additional info.
+ * Default is NSTextAlignmentCenter.
+ */
+@property (assign, nonatomic) NSTextAlignment headerAdditionalInfoTextAlignment;
+
+/**
+ * The text insets for title and additional info
+ */
+@property (assign, nonatomic) UIEdgeInsets headerTextInsets;
+
+/**
+ * The text separator offset between title and additional info
+ */
+@property (assign, nonatomic) CGFloat headerTextSeparatorOffset;
 
 /**
  * The line color of the top border view.

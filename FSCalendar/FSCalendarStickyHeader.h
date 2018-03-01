@@ -16,7 +16,11 @@
 
 @property (weak, nonatomic) UILabel *titleLabel;
 
+@property (weak, nonatomic) UILabel *additionalInfoLabel;
+
 @property (strong, nonatomic) NSDate *month;
+
+@property (strong, nonatomic) NSString *additionalInfo;
 
 - (void)configureAppearance;
 

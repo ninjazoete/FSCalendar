@@ -64,6 +64,11 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 
 /**
+ * Asks the dataSource for a additional info for specific month
+ */
+- (nullable NSString *)calendar:(FSCalendar *)calendar monthAdditionalInfoForDate:(NSDate *)date;
+
+/**
  * Asks the dataSource for a title for the specific date as a replacement of the day text
  */
 - (nullable NSString *)calendar:(FSCalendar *)calendar titleForDate:(NSDate *)date;

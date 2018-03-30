@@ -1099,9 +1099,9 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         [self invalidateHeaders];
         [self.collectionView reloadData];
     } else {
-        [UIView performWithoutAnimation:^{
-            [self.collectionView reloadItemsAtIndexPaths:self.collectionView.indexPathsForVisibleItems];
-        }];
+        
+        [self.collectionView reloadItemsAtIndexPaths:self.collectionView.indexPathsForVisibleItems];
+        
     }
 }
 
